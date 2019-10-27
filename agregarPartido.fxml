@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="763.0" prefWidth="1069.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controlador.AgregarPartidoController">
+    <stylesheets>
+        <URL value="@/css/style.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="405.0" layoutY="30.0" prefHeight="51.0" prefWidth="232.0" text="AGREGAR PARTIDOS">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="192.0" layoutY="163.0" text="Selecciona equipo local" />
+      <Label layoutX="188.0" layoutY="220.0" text="Selecciona equipo visitante" />
+      <Label layoutX="188.0" layoutY="279.0" text="Goles equipo local" />
+      <Label layoutX="184.0" layoutY="336.0" text="Goles equipo visitante" />
+      <Label layoutX="188.0" layoutY="391.0" text="Fecha Partido" />
+      <Label layoutX="193.0" layoutY="560.0" text="Seleccionar jornada" />
+      <ComboBox fx:id="cbequipolocal" layoutX="541.0" layoutY="158.0" prefHeight="31.0" prefWidth="232.0" />
+      <ComboBox fx:id="cbequipovisitante" layoutX="541.0" layoutY="215.0" prefHeight="31.0" prefWidth="232.0" />
+      <TextField fx:id="tfequipolocal" layoutX="544.0" layoutY="274.0" prefHeight="31.0" prefWidth="232.0" />
+      <TextField fx:id="tfequipovisitante" layoutX="544.0" layoutY="331.0" prefHeight="31.0" prefWidth="232.0" />
+      <DatePicker fx:id="dpfechapartido" layoutX="541.0" layoutY="386.0" prefHeight="31.0" prefWidth="232.0" />
+      <ComboBox fx:id="cbjornada" layoutX="544.0" layoutY="555.0" prefHeight="31.0" prefWidth="232.0" />
+      <Button fx:id="btagregarpartidos" layoutX="331.0" layoutY="647.0" mnemonicParsing="false" onAction="#agregarPartidos" text="Agregar Partidos" />
+      <Button fx:id="btatras" layoutX="583.0" layoutY="647.0" mnemonicParsing="false" onAction="#atras" text="Atrás" />
+      <Label layoutX="188.0" layoutY="454.0" text="Elige liga" />
+      <Label layoutX="188.0" layoutY="506.0" text="Elige temporada" />
+      <ComboBox fx:id="cbliga" layoutX="544.0" layoutY="449.0" onAction="#filtrarLiga" prefHeight="31.0" prefWidth="232.0" />
+      <ComboBox fx:id="cbtemporada" layoutX="544.0" layoutY="501.0" onAction="#filtrarTemporada" prefHeight="31.0" prefWidth="232.0" />
+   </children>
+</AnchorPane>

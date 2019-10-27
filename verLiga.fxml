@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="677.0" prefWidth="1078.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VerLigaController">
+    <stylesheets>
+        <URL value="@/css/style.css" />
+    </stylesheets>
+   <children>
+      <MenuBar layoutY="-1.0" prefHeight="41.0" prefWidth="1255.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="ACCIONES">
+            <items>
+              <MenuItem fx:id="itaccionagregarliga" mnemonicParsing="false" onAction="#agregarLiga" text="Agregar Liga" />
+                  <MenuItem fx:id="itaccionmodificarliga" mnemonicParsing="false" onAction="#modificarLiga" text="Modificar Liga" />
+                  <MenuItem fx:id="itaccioneliminarliga" mnemonicParsing="false" onAction="#eliminarLiga" text="Eliminar Liga" />
+                  <MenuItem fx:id="itaccionatras" mnemonicParsing="false" onAction="#atras" text="Atrás" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="tbligas" layoutX="46.0" layoutY="73.0" prefHeight="434.0" prefWidth="1166.0">
+        <columns>
+          <TableColumn fx:id="colidliga" prefWidth="303.0" text="ID LIGA" />
+          <TableColumn fx:id="colnombreliga" prefWidth="295.0" text="NOMBRE LIGA" />
+            <TableColumn fx:id="colpais" prefWidth="319.0" text="PAÍS" />
+            <TableColumn fx:id="colescudoliga" prefWidth="248.0" text="ESCUDO LIGA" />
+        </columns>
+      </TableView>
+      <Button fx:id="btatras" layoutX="545.0" layoutY="562.0" mnemonicParsing="false" onAction="#atras" prefHeight="31.0" prefWidth="173.0" text="ATRAS" />
+   </children>
+</AnchorPane>

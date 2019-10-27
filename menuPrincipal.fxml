@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="843.0" prefWidth="1229.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.MenuPrincipalController">
+    <stylesheets>
+        <URL value="@/css/style.css" />
+    </stylesheets>
+   <children>
+      <MenuBar layoutX="4.0" layoutY="1.0" prefHeight="37.0" prefWidth="1221.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="LIGA">
+            <items>
+              <MenuItem fx:id="itagregarliga" mnemonicParsing="false" onAction="#llevarAgregarLiga" text="Agregar Liga" />
+                  <MenuItem fx:id="itverliga" mnemonicParsing="false" onAction="#verLiga" text="Ver" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="TEMPORADA">
+            <items>
+              <MenuItem fx:id="itagregartemporada" mnemonicParsing="false" onAction="#agregarTemporada" text="Agregar Temporada" />
+                  <MenuItem fx:id="itvertemporadas" mnemonicParsing="false" onAction="#verTemporadas" text="Ver Temporadas" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="JORNADAS">
+               <items>
+                  <MenuItem fx:id="itjornada" mnemonicParsing="false" onAction="#llevarAgregarJornada" text="Agregar Jornada" />
+               </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="EQUIPOS">
+              <items>
+                <MenuItem fx:id="itagregarequipo" mnemonicParsing="false" onAction="#llevarAgregarEquipo" text="Agregar Equipo" />
+                  <MenuItem fx:id="itverequipo" mnemonicParsing="false" onAction="#llevarVerEquipo" text="Ver Equipo" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="PARTIDOS">
+              <items>
+                <MenuItem fx:id="itagregarpartido" mnemonicParsing="false" onAction="#llevarAgregarPartido" text="Agregar Partido" />
+                  <MenuItem fx:id="itverpartido" mnemonicParsing="false" onAction="#llevarVerPartido" text="Ver partido" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="SALIR">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <ComboBox fx:id="cbliga" layoutX="55.0" layoutY="722.0" onAction="#filtrarLiga" prefWidth="150.0" />
+      <ComboBox fx:id="cbtemporada" layoutX="275.0" layoutY="722.0" onAction="#filtrarTemporada" prefWidth="150.0" />
+      <ComboBox fx:id="cbjornada" layoutX="479.0" layoutY="722.0" onAction="#filtrarJornada" prefWidth="150.0" />
+      <ComboBox fx:id="cbequipo" layoutX="691.0" layoutY="722.0" onAction="#filtrarEquipo" prefWidth="150.0" />
+      <ComboBox layoutX="901.0" layoutY="722.0" prefWidth="150.0" />
+      <Label layoutX="94.0" layoutY="691.0" text="Elige liga" />
+      <Label layoutX="296.0" layoutY="691.0" text="Elige temporada" />
+      <Label layoutX="504.0" layoutY="691.0" text="Elige jornada" />
+      <Label layoutX="715.0" layoutY="691.0" text="Elige equipo" />
+      <Label layoutX="914.0" layoutY="691.0" text="Elige partido IDK" />
+      <TableView fx:id="tbtabla" layoutX="4.0" layoutY="78.0" prefHeight="584.0" prefWidth="1221.0">
+        <columns>
+          <TableColumn fx:id="colequipolocal" prefWidth="184.0" text="EQUIPO LOCAL" />
+          <TableColumn fx:id="colgolesequipolocal" minWidth="0.0" prefWidth="163.0" text="GOLES EQUIPO LOCAL" />
+            <TableColumn fx:id="colgolesequipovisitante" prefWidth="194.0" text="GOLES EQUIPO VISITANTE" />
+            <TableColumn fx:id="colequipovisitante" minWidth="0.0" prefWidth="302.0" text="EQUIPO VISITANTE" />
+            <TableColumn fx:id="coljornada" prefWidth="141.0" text="JORNADA" />
+            <TableColumn fx:id="colfechapartido" prefWidth="236.0" text="FECHA PARTIDO" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

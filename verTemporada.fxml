@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="583.0" prefWidth="835.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VerTemporadaController">
+    <stylesheets>
+        <URL value="@/css/style.css" />
+    </stylesheets>
+   <children>
+      <MenuBar layoutY="-4.0" prefHeight="44.0" prefWidth="835.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="ACCIONES">
+            <items>
+              <MenuItem fx:id="itagregartemporada" mnemonicParsing="false" onAction="#agregarTemporada" text="Agregar Temporada" />
+                  <MenuItem fx:id="itmodificartemporada" mnemonicParsing="false" onAction="#modificarTemporada" text="Modificar Temporada" />
+                  <MenuItem fx:id="iteliminartemporada" mnemonicParsing="false" onAction="#eliminarTemporada" text="Eliminar Temporada" />
+                  <MenuItem mnemonicParsing="false" text="Atrás" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="tbtemporada" layoutX="25.0" layoutY="69.0" prefHeight="367.0" prefWidth="791.0">
+        <columns>
+          <TableColumn fx:id="colidtemporada" prefWidth="281.0" text="ID TEMPORADA" />
+          <TableColumn fx:id="colnombretemporada" minWidth="0.0" prefWidth="273.0" text="NOMBRE TEMPORADA" />
+            <TableColumn fx:id="colnombreliga" prefWidth="236.0" text="NOMBRE LIGA" />
+        </columns>
+      </TableView>
+      <Button fx:id="btatras" layoutX="367.0" layoutY="465.0" mnemonicParsing="false" onAction="#atras" text="ATRÁS" />
+   </children>
+</AnchorPane>

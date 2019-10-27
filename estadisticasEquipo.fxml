@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="838.0" prefWidth="1165.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controlador.EstadisticasEquipoController">
+    <stylesheets>
+        <URL value="@/css/style.css" />
+    </stylesheets>
+   <children>
+      <MenuBar layoutX="-4.0" layoutY="-5.0" prefHeight="35.0" prefWidth="1165.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="ACCIONES">
+            <items>
+              <MenuItem fx:id="itatras" mnemonicParsing="false" text="ATRÁS" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <BarChart layoutX="84.0" layoutY="56.0" prefHeight="325.0" prefWidth="419.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Label layoutX="181.0" layoutY="360.0" text="Partidos ganados, empatados y perdidos" />
+      <ComboBox layoutX="159.0" layoutY="388.0" prefHeight="31.0" prefWidth="270.0" />
+      <RadioButton layoutX="172.0" layoutY="440.0" mnemonicParsing="false" text="Local" />
+      <RadioButton layoutX="262.0" layoutY="441.0" mnemonicParsing="false" text="Visitante" />
+      <RadioButton layoutX="379.0" layoutY="440.0" mnemonicParsing="false" text="Absoluto" />
+      <BarChart layoutX="564.0" layoutY="45.0" prefHeight="325.0" prefWidth="474.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Label layoutX="789.0" layoutY="360.0" text="Media de goles" />
+      <RadioButton layoutX="734.0" layoutY="393.0" mnemonicParsing="false" text="A favor" />
+      <RadioButton layoutX="891.0" layoutY="393.0" mnemonicParsing="false" text="En contra" />
+      <RadioButton layoutX="734.0" layoutY="430.0" mnemonicParsing="false" text="En casa" />
+      <RadioButton layoutX="891.0" layoutY="430.0" mnemonicParsing="false" text="Fuera de casa" />
+      <BarChart layoutX="95.0" layoutY="487.0" prefHeight="286.0" prefWidth="419.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Label layoutX="122.0" layoutY="780.0" text="Racha de partidos" />
+      <ComboBox layoutX="294.0" layoutY="775.0" prefHeight="31.0" prefWidth="187.0" />
+      <Label layoutX="533.0" layoutY="487.0" text="Porcentaje de partidos en que ambos equipos marcan" />
+      <TextField layoutX="915.0" layoutY="482.0" />
+      <BarChart layoutX="545.0" layoutY="541.0" prefHeight="245.0" prefWidth="572.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Label layoutX="648.0" layoutY="780.0" prefHeight="21.0" prefWidth="278.0" text="Porcentaje de resultados más repetidos" />
+   </children>
+</AnchorPane>
